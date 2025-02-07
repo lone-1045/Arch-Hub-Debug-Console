@@ -444,7 +444,7 @@ send.MouseButton1Click:Connect(function()
 		output.line6.Text = "6.  Remote [burte force all the remote (risky)]"
 		output.line7.Text = "7.  Gui [clone all gui]"
 		output.line8.Text = "8.  NoLight [destroy all light]"
-		output.line8.Text = "9.  Clear [clear console]"
+		output.line9.Text = "9.  Clear [clear console]"
 	end
 	if text:match("%S+") == "hide" then
 		local duration = tonumber(text:match("%d+"))
