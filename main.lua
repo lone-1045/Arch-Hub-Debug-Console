@@ -386,7 +386,7 @@ game:GetService("UserInputService").InputBegan:Connect(function(key)
 										local function findgui(parent, path)
 											for _, child in pairs(parent:GetChildren()) do
 												local childPath = path .. "/" .. child.Name
-												if child:IsA("ScreenGui") then
+												if child:IsA("ScreenGui") and child.Parent ~= game.CoreGui then
 													create(child.Name,childPath,child)
 													--print("Found RemoteEvent: ",child.Name,childPath)
 												end
@@ -735,7 +735,7 @@ send.MouseButton1Click:Connect(function()
 									local function findgui(parent, path)
 										for _, child in pairs(parent:GetChildren()) do
 											local childPath = path .. "/" .. child.Name
-											if child:IsA("ScreenGui") then
+											if child:IsA("ScreenGui") and child.Parent ~= game.CoreGui then
 												create(child.Name,childPath,child)
 												print("Found RemoteEvent: ",child.Name,childPath)
 											end
