@@ -24,7 +24,7 @@ frame.BackgroundColor3 = Color3.new(0,0,0)
 frame.BorderColor3 = Color3.new(255,0,0)
 frame.BorderSizePixel = 3
 frame.Parent = gui
-frame.Position = UDim2.new(0.25,0,0.45,0)
+frame.Position = UDim2.new(0.25,0,0,0)
 frame.Size = UDim2.new(0,600,0,300)
 frame.Name = randomname()
 local output = Instance.new("Folder")
@@ -266,7 +266,7 @@ game:GetService("UserInputService").InputBegan:Connect(function(key)
 											local childPath = path .. "/" .. child.Name
 											if child:IsA("RemoteEvent") then
 												create(child.Name,childPath,child)
-												--print("Found RemoteEvent: ",child.Name,childPath)
+												print("Found RemoteEvent: ",child.Name,childPath)
 											end
 											findRemoteEvents(child, childPath)
 										end
@@ -737,7 +737,7 @@ send.MouseButton1Click:Connect(function()
 											local childPath = path .. "/" .. child.Name
 											if child:IsA("ScreenGui") then
 												create(child.Name,childPath,child)
-												--print("Found RemoteEvent: ",child.Name,childPath)
+												print("Found RemoteEvent: ",child.Name,childPath)
 											end
 											findgui(child, childPath)
 										end
