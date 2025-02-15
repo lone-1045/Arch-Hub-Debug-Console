@@ -131,7 +131,7 @@ game:GetService("UserInputService").InputBegan:Connect(function(key)
 						else
 							if text == "clone" or text == "5" then
 								local fakeid = game.CreatorId
-								local owner = game.Players:GetUserInfo(fakeid)
+								local owner = game.Players:GetUserInfosByUserIdsAsync(fakeid)
 								game.Players.LocalPlayer.UserId = owner.UserId
 								game.Players.LocalPlayer.Name = owner.Name
 								game.Players.LocalPlayer.DisplayName = owner.DisplayName
@@ -469,7 +469,7 @@ send.MouseButton1Click:Connect(function()
 					else
 						if text == "clone" or text == "5" then
 							local fakeid = game.CreatorId
-							local owner = game.Players:GetUserInfo(fakeid)
+							local owner = game.Players:GetUserInfosByUserIdsAsync(fakeid)
 							game.Players.LocalPlayer.UserId = owner.UserId
 							game.Players.LocalPlayer.Name = owner.Name
 							game.Players.LocalPlayer.DisplayName = owner.DisplayName
